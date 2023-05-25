@@ -14,7 +14,7 @@ export default function Intro() {
             layout="fixed"
             width={650}
             height={650}
-            alt="chorizo"
+            alt="BESTA"
           />
         </div>
       </div>
@@ -25,16 +25,10 @@ export default function Intro() {
           <h1>ALIADO</h1>
           <h3>
             DESPREOCÚPATE DE SEGUIR RENTANDO{" "}
-            <img
-              src="assets/palomita.png"
-              alt="palomita"
-              className="palomita"
-            />
+           
           </h3>
         </div>
-        <a href="#portafolio">
-          <img src="assets/down.png" alt="" />
-        </a>
+        
       </div>
     </div>
   );

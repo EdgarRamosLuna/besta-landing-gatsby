@@ -14,11 +14,6 @@ function Home() {
   return (
         <>
         <Intro/>
-        <Autos/>
-        <Autos2/>
-        <Requisitos/>
-        <Beneficios/>
-        <Contact/>
         </>
   );
 }
