@@ -41,5 +41,8 @@
     "styled-components": "^5",
     "swiper": "^8.4.2"
     
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
