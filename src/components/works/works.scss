@@ -1,0 +1,132 @@
+@import "../../global.scss";
+
+.works{
+    background-color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .arrow{
+        height: 70px;
+        position: absolute;
+        cursor: pointer;
+
+        @include mobile {
+            display: none;
+          }
+
+        &.left{
+            left: 10px;
+            transform: rotateY(180deg);
+            
+        }
+
+        &.right{
+            right: 10px;
+        }
+    }
+
+    .slider{
+        height: 40%;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        @include mobile {
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+        .container{
+            width: 50vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .item{
+                width: 70%;
+                height: 100%;
+                background-color: white;
+                display: flex;
+                border-radius: 20px;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile {
+                    width: 80%;
+                    height: 100px;
+                    margin: 20px 0;
+                  }
+
+            .left{
+                flex: 8;
+                display: flex;
+                justify-content: center;
+
+                .leftContainer{
+                    width: 90%;
+                    height: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+
+                    h1{
+                        font-size: 60px;
+                    }
+
+                    h2{
+                        font-size: 30px;
+                        color: $mainColor;
+
+                        @include mobile{
+                            font-size: 13px;
+                          }
+                    }
+                    h3{
+                        font-size: 30px;
+                        color: $mainColor;
+
+                        @include mobile{
+                            font-size: 13px;
+                          }
+                    }
+                    p{
+                        color: $mainColor;
+                        font-size: 18px;
+
+                        @include mobile{
+                            display: none;
+                          }
+                    }
+                    span{
+                        font-size: 12px;
+                        font-weight: 200;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .right{
+                flex: 8;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+
+                .image-carro{
+                    width: 600px;
+                }
+            }
+            }
+        }
+    }
+
+    
+}
