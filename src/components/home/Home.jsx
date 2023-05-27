@@ -9,11 +9,17 @@ import React from 'react';
 
 
 
+
 function Home() {
   
   return (
         <>
         <Intro/>
+        {/* <Autos/> */}
+        <Autos2/>
+        <Requisitos/>
+        <Beneficios/>
+        <Contact/>
         </>
   );
 }

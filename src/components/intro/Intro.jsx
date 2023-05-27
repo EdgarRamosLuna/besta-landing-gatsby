@@ -1,21 +1,33 @@
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import "./intro.scss";
 import React from "react";
-
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 export default function Intro() {
+  const data = useStaticQuery(graphql`
+    query {
+      introCarImg: file(relativePath: { eq: "INICIO_CARRO.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 1920            
+            placeholder: BLURRED                        
+          )
+        }
+      }
+    }
+  `);
+
+  const image = getImage(data.introCarImg);
   return (
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <StaticImage
-            src="INICIO-CARRO.png"
-            loading="eager"
-            placeholder="blurred"
-            layout="fixed"
-            width={650}
-            height={650}
-            alt="BESTA"
-          />
+
+           <GatsbyImage image={image} alt="Image Description" 
+          //  imgClassName="imgContainer"
+
+           />
+        
         </div>
       </div>
       <div className="right">
@@ -25,10 +37,16 @@ export default function Intro() {
           <h1>ALIADO</h1>
           <h3>
             DESPREOCÚPATE DE SEGUIR RENTANDO{" "}
-           
+            <img
+              src={`../../palomita.png`}
+              alt="palomita"
+              className="palomita"
+            />
           </h3>
         </div>
-        
+        <a href="#portafolio">
+          <img src={`../../down.png`} alt="" />
+        </a>
       </div>
     </div>
   );

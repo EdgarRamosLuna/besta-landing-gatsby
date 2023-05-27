@@ -1,5 +1,32 @@
 @import "../../global.scss";
 
+/*
+Animation keyframes left to 50px
+*/
+@keyframes fadeInLeft {
+
+    // 0% {
+        
+    // }
+    100% {
+        transform: translateX(0px);
+    }
+    // 0% {
+    //     //transform: translateX(100px);
+    // }
+}
+@keyframes fadeInLeft {
+
+    // 0% {
+        
+    // }
+    100% {
+        transform: translateX(0px);
+    }
+    // 0% {
+    //     //transform: translateX(100px);
+    // }
+}
 .intro{
     background-color: white;
     display: flex;
@@ -14,14 +41,31 @@
         overflow: hidden;
         
         .imgContainer{
-            width: 650px;
+            //width: 650px;
             height: 650px;
             background-color: white;
             display: flex;
             align-items: flex-end;
-            justify-content: center;
-            float: right;
-
+            justify-content: end;
+            float: left;
+            //transform: translateX(-100%);
+            //triger animation fadeInLeft
+            transform: translateX(-100%);
+            animation-name: fadeInLeft;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 1ms;
+          //  transition: all 0.3s ease-in-out;
+        //     &:hover{
+        //        //trigger fadeInLeft animation
+        //        animation-name: fadeInLeft;
+        //        animation-duration: 0.5s;
+        //        animation-timing-function: ease-in-out;
+        //  //      transform: translateX(100px);
+        //        animation-iteration-count: 2;
+        //        animation-direction: alternate;
+                
+        //     }
             @include mobile {
                 align-items: flex-start;
             }
@@ -36,7 +80,6 @@
             }
         }
     }
-
     .right{
         flex: 0.5;
         position: relative;

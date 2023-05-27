@@ -12,9 +12,9 @@ const Layout = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <footer>
+      {/* <footer>
         <p>Copyright © 2023</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
