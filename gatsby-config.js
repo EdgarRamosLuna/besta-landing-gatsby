@@ -6,7 +6,7 @@ module.exports = {
     title: ``,
     description: `Besta Landing Page`,
     author: `@bestamx`,
-    siteUrl: ``,
+    siteUrl: `https://besta.mx/`,
   },
   plugins: [
     "gatsby-plugin-sass",
